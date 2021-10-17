@@ -41,5 +41,12 @@ Checks extended attributes of files by perforaming operations like listing a non
 
 KIO-FUSE fails the test when XFSTESTS tries to query and set time of a (potentially non-existent, not clear) file called `syscalltest` located in the `test` partition. *IF* the file does not exist, should this not be the ideal behaviour? If so, why do we fail the test?
 
+### generic/023
 
+#### What does the test do? 
 
+Checks `renameat2` syscall without flags. `renameat2` has an additional flags argument and `renameat2` without flags is equivalent to `renameat` call.
+
+#### Analysis
+
+When XFSTESTS tries to create a directory in the `test` partition, it fails with an `invalid arguments` message. Subsequently, creating the file (using `touch`) fails in absence of the required directory.
