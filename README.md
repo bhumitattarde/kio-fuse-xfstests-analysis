@@ -50,3 +50,13 @@ Checks `renameat2` syscall without flags. `renameat2` has an additional flags ar
 #### Analysis
 
 When XFSTESTS tries to create a directory in the `test` partition, it fails with an `invalid arguments` message. Subsequently, creating the file (using `touch`) fails in absence of the required directory.
+
+### generic/024
+
+#### What does the test do? 
+
+Checks `renameat2` syscall with `RENAME_NOREPLACE` flag.
+
+#### Analysis
+
+Similar to `generic/023`.
