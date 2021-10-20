@@ -60,3 +60,14 @@ Checks `renameat2` syscall with `RENAME_NOREPLACE` flag.
 #### Analysis
 
 Similar to `generic/023`.
+
+### generic/025
+
+#### What does the test do? 
+
+Checks `renameat2` syscall with `RENAME_EXCHANGE` flag.
+
+#### Analysis
+
+Similar to `generic/023` except creation of two files fails because of the failure to create directory.
+
