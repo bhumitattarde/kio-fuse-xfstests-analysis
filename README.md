@@ -71,3 +71,13 @@ Checks `renameat2` syscall with `RENAME_EXCHANGE` flag.
 
 Similar to `generic/023` except creation of two files fails because of the failure to create directory.
 
+### generic/028
+
+#### What does the test do? 
+
+Tests `getcwd` call.
+
+#### Analysis
+
+Creation of the file named `t_getcwd_testfile` fails with message `invalid arguments`.
+
