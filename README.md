@@ -81,3 +81,14 @@ Tests `getcwd` call.
 
 Creation of the file named `t_getcwd_testfile` fails with message `invalid arguments`.
 
+
+### generic/035
+
+#### What does the test do? 
+
+Checks overwriting rename system call.
+
+#### Analysis
+
+Similar to `generic/023` -- creation of directory required fails, and without the directory, the test cannot proceed and/or succeed.
+
