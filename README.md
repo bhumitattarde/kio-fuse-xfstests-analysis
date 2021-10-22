@@ -92,3 +92,26 @@ Checks overwriting rename system call.
 
 Similar to `generic/023` -- creation of directory required fails, and without the directory, the test cannot proceed and/or succeed.
 
+
+### generic/070
+
+#### What does the test do? 
+
+'Improved' version of fstress (`generic/013`) test. Specifically tests for extended attribute writes. Passes the following arguments and flags to fstress:
+```
+_scale_fsstress_args \
+	-d $TEST_DIR/fsstress \
+	-f allocsp=0 \
+	-f freesp=0 \
+	-f bulkstat=0 \
+	-f bulkstat1=0 \
+	-f resvsp=0 \
+	-f unresvsp=0 \
+	-f attr_set=100 \
+	-f attr_remove=100 \
+  -p 1 -n 10000 -S c
+```
+
+#### Analysis
+
+Setting times of a file called `syscalltest` fails with `no such file or directory`. This means creation of the file failed itself.
