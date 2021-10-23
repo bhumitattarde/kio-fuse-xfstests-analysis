@@ -125,3 +125,13 @@ Checks `renameat2` syscall with RENAME_WHITEOUT flag
 #### Analysis
 
 XFSTests tries to find files named `none/symb`, `none/dire` & `none/tree` but fails to find them. Additionally, `samedir  regu/none` command fails with `Operation not supported` message.
+
+### generic/080
+
+#### What does the test do? 
+
+Verifies that `mtime` is updated when writing to `mmap`-ed pages
+
+#### Analysis
+
+Test fails because `mtime` and `ctime` fails to update.
