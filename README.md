@@ -120,7 +120,7 @@ Setting times of a file called `syscalltest` fails with `no such file or directo
 
 #### What does the test do? 
 
-Checks `growfs` corner cases. `growfs` is used to expand the size of a filesystem. The test tries expanding the file system to sizes that are known to be problematic. It also tries expanding file sytem to very large sizes like 2TB, 4TB etc.
+Checks `renameat2` syscall with RENAME_WHITEOUT flag
 
 #### Analysis
 
