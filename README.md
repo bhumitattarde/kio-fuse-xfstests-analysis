@@ -115,3 +115,13 @@ _scale_fsstress_args \
 #### Analysis
 
 Setting times of a file called `syscalltest` fails with `no such file or directory`. This means creation of the file failed itself.
+
+### generic/078
+
+#### What does the test do? 
+
+Checks `growfs` corner cases. `growfs` is used to expand the size of a filesystem. The test tries expanding the file system to sizes that are known to be problematic. It also tries expanding file sytem to very large sizes like 2TB, 4TB etc.
+
+#### Analysis
+
+XFSTests tries to find files named `none/symb`, `none/dire` & `none/tree` but fails to find them. Additionally, `samedir  regu/none` command fails with `Operation not supported` message.
