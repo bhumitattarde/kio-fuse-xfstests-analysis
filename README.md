@@ -135,3 +135,13 @@ Verifies that `mtime` is updated when writing to `mmap`-ed pages
 #### Analysis
 
 Test fails because `mtime` and `ctime` fails to update.
+
+### generic/125
+
+#### What does the test do? 
+
+Tests `ftruncate` syscall.
+
+#### Analysis
+
+Truncation of the file seems to succeed but unlinking of the file fails. 
