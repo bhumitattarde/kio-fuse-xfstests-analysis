@@ -146,7 +146,6 @@ Tests `ftruncate` syscall.
 
 Truncation of the file seems to succeed but unlinking of the file fails. 
 
-
 ### generic/192
 
 #### What does the test do? 
@@ -157,3 +156,13 @@ Truncation of the file seems to succeed but unlinking of the file fails.
 #### Analysis
 
 Stat-ing of the file used for testing fails with `file doesn't exist` message.
+
+### generic/215
+
+#### What does the test do? 
+
+Checks that `ctime` and `mtime` updates are correct after mapped writes.
+
+#### Analysis
+
+`ctime` and `mtime` doesn't update after mapped writes.
