@@ -145,3 +145,15 @@ Tests `ftruncate` syscall.
 #### Analysis
 
 Truncation of the file seems to succeed but unlinking of the file fails. 
+
+
+### generic/192
+
+#### What does the test do? 
+
+- Checks that `atime` is persistent after unmount
+- Checks that `atime` updates correctly
+
+#### Analysis
+
+Stat-ing of the file used for testing fails with `file doesn't exist` message.
