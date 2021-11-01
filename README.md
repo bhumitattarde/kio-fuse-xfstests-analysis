@@ -166,3 +166,13 @@ Checks that `ctime` and `mtime` updates are correct after mapped writes.
 #### Analysis
 
 `ctime` and `mtime` doesn't update after mapped writes.
+
+### generic/221
+
+#### What does the test do? 
+
+Checks `ctime` updates when calling futimens without `UTIME_OMIT` for the `mtime` entry.
+
+#### Analysis
+
+XFSTESTS fails to update `ctime`.
