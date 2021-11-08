@@ -1,5 +1,7 @@
 # KIO-FUSE XFSTESTS analysis
 
+Results in tablular format can be found [here](https://docs.google.com/spreadsheets/d/1LkeBuplbXXJxoXBS-ApsfA1trRLy1CB6PA5a8E1LyyY/edit?usp=sharing).
+
 ## Failing tests
 
 ### generic/013
