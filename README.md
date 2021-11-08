@@ -178,3 +178,13 @@ Checks `ctime` updates when calling futimens without `UTIME_OMIT` for the `mtime
 #### Analysis
 
 XFSTESTS fails to update `ctime`.
+
+### generic/248
+
+#### What does the test do? 
+
+Tests if `pwrite` hangs when writing from mmaped buffer of the same page.
+
+#### Analysis
+
+Opening the test file at `/mnt/test/test_file` fails with 'invalid argument' error.
