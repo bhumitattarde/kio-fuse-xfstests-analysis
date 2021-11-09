@@ -188,3 +188,13 @@ Tests if `pwrite` hangs when writing from mmaped buffer of the same page.
 #### Analysis
 
 Opening the test file at `/mnt/test/test_file` fails with 'invalid argument' error.
+
+### generic/249
+
+#### What does the test do? 
+
+Checks `splice` syscall.
+
+#### Analysis
+
+`pwrite` with parameters `-S 0xa5a55a5a 0 32768k` fails.
