@@ -198,3 +198,13 @@ Checks `splice` syscall.
 #### Analysis
 
 `pwrite` with parameters `-S 0xa5a55a5a 0 32768k` fails.
+
+### generic/259
+
+#### What does the test do? 
+
+Writer of the test descibes the test as `fzero a file at midway through a CoW region`.
+
+#### Analysis
+
+XFSTESTS tries to stat file at `/mnt/test/timestamp-test.txt` but fails because the file does not exist.
